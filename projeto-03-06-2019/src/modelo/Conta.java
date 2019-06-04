@@ -36,14 +36,22 @@ public class Conta {
     }
 
     public void deposito(double valor){
+        System.out.println(saldo);
         this.saldo = this.saldo + valor;
         System.out.println("foi depositado " + valor);
     }
 
     public void saque(double valor){
-        this.saldo = this.saldo - valor;
-        System.out.println("valor sacado é " + valor);
+      if (valor > saldo){
+        System.out.println("saldo insuficiente" );
     }
 
+    else{
+          saldo = saldo - valor;
+          System.out.println(("saque de: " + valor));
+          System.out.println("novo saldo é de " + saldo);
+
+      }
+    }
 
 }
